@@ -28,5 +28,5 @@
 | | | **6.2 Working with APIs in Shell Script** | • cURL for REST API calls<br>• JSON parsing with shell tools<br>• Authentication methods |
 | **Module 7: Real-World Applications** | Apply shell scripting to solve practical problems | **7.1 Automating AWS Operations** | • AWS CLI setup<br>• EC2 instance management<br>• S3 automation<br>• Security group configuration |
 | | | **7.2 Backup and Restore Automation** | • File backup strategies<br>• Database backups<br>• Automated restore procedures<br>• Backup verification |
-
 | | | **7.3 Log Parsing and Analysis** | • Log aggregation techniques<br>• Pattern extraction<br>• Report generation<br>• Anomaly detection |
+
