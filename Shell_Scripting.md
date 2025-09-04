@@ -4,7 +4,6 @@
 |--------|------|-------|-----------|
 | **Module 1: Shell Foundations** | Understand shell environment and set up working Bash | **1.1 What is Shell?** | • Bash, Zsh, Ksh, etc.<br>• Shell history and evolution |
 | | | **1.2 Shell vs Terminal vs Bash** | • Understanding the differences<br>• When to use each component |
-|
 | **Module 2: File Operations & Data Processing** | Manipulate files, directories and text data effectively | **2.1 Working with Files and Directories** | • ls, cp, mv, mkdir<br>• find command<br>• File system navigation |
 | | | **2.2 String Manipulation** | • sed for stream editing<br>• awk for pattern scanning<br>• cut and tr utilities |
 | | | **2.3 File Permissions and Ownership** | • chmod command<br>• chown command<br>• umask settings |
@@ -29,4 +28,5 @@
 | | | **6.2 Working with APIs in Shell Script** | • cURL for REST API calls<br>• JSON parsing with shell tools<br>• Authentication methods |
 | **Module 7: Real-World Applications** | Apply shell scripting to solve practical problems | **7.1 Automating AWS Operations** | • AWS CLI setup<br>• EC2 instance management<br>• S3 automation<br>• Security group configuration |
 | | | **7.2 Backup and Restore Automation** | • File backup strategies<br>• Database backups<br>• Automated restore procedures<br>• Backup verification |
+
 | | | **7.3 Log Parsing and Analysis** | • Log aggregation techniques<br>• Pattern extraction<br>• Report generation<br>• Anomaly detection |
