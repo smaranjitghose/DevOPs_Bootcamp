@@ -28,7 +28,7 @@ That's when Bhanu met maheedhar, a seasoned Shell Scripting Sorcerer who noticed
 
 ## 3.1 Writing Your First Shell Script
 
-​<img src="./image/Module3/Writing Your First Shell Script.png" alt="Writing Your First Shell Script" style="display: block; margin: auto; width: 500px; height: auto;/>
+​<img src="./image/Module3/Writing Your First Shell Script.png" alt="Writing Your First Shell Script" style="display: block; margin: auto; width: 500px; height: auto;"/>
 
 ### Understanding Text Editors vs. Script Files
 | Concept          | Description                                  | Example & Explanation                                                                 |
@@ -380,3 +380,4 @@ check_disk_space
 
 echo "Backup process finished at $(date)"
 exit 0
+
