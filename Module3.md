@@ -27,10 +27,6 @@ That's when Bhanu met maheedhar, a seasoned Shell Scripting Sorcerer who noticed
 
 <img style="background: black" src="./image/Module3/Writing Your First Shell Script.png" alt="Writing Your First Shell Script" width="250px"/>
 
-Perfect 👍 now let’s transform your **table-style technical notes** into our **engaging book format** with **story → concept → deep dive → example → exercise → recap → next step**.
-
-I’ll take your first topic *“Writing Your First Shell Script”* (with the text editor, script creation, and shebang structure parts) and rewrite it in our agreed structure:
-
 ---
 
 ## Concept Introduction
@@ -1184,3 +1180,4 @@ check_disk_space
 echo "Backup process finished at $(date)"
 exit 0
 ```
+
