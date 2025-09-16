@@ -27,9 +27,8 @@ That's when Bhanu met maheedhar, a seasoned Shell Scripting Sorcerer who noticed
 
 <img style="background: black" src="./image/Module3/Writing Your First Shell Script.png" alt="Writing Your First Shell Script" width="250px"/>
 
----
 
-## Concept Introduction
+## What’s Really Happening
 
 A **shell script** is nothing more than a text file that contains a series of commands you could type manually in the terminal. The difference? Instead of repeating yourself, you save them into a file and run it as a program.
 
@@ -37,7 +36,7 @@ To write scripts, you’ll use **text editors** — special tools to create and 
 
 ---
 
-## Technical Deep Dive
+## How It Works
 
 ### Text Editors vs Script Files
 
@@ -133,8 +132,6 @@ He saves the file and smiles. He just bottled his daily ritual into a single scr
 
 <img style="background: black" src="./image/Module3/Executing Scripts - visual selection.png" alt="Executing Scripts - visual selection" />
 
-Perfect 👌 let’s now transform your **Executing Scripts** notes into the same **book-style format** we agreed on.
-
 ---
 
 Bhanu stared at his new script, `daily_backup.sh`. It looked perfect — a neat little spell written on his digital scroll.
@@ -158,7 +155,7 @@ Maheedhar chuckled knowingly.
 
 ---
 
-## Concept Introduction
+## What’s Really Happening
 
 Linux is like a kingdom with strict gatekeepers. Every file has **permissions** that decide:
 
@@ -170,7 +167,7 @@ A shell script, by default, is just a text file. To make it runnable, you must *
 
 ---
 
-## Technical Deep Dive
+## How It Works
 
 ### Understanding Script Permissions
 
@@ -297,8 +294,6 @@ The terminal responds by creating a backup folder, copying reports, and showing 
 <img style="background: black" src="./image/Module3/Shell Scripting Variables and Data Types - visual selection.png" alt="Variables and Data Types - visual selection" style="margin: auto; width: 500px; height: auto;"/>
 
 
-##  Story Hook
-
 Bhanu had successfully executed his first script. But soon, he realized a problem: every time he needed to change the backup folder name or number of files, he had to **edit the script directly**.
 
 “This feels inefficient,” he thought. “There must be a way to store values and reuse them without rewriting everything.”
@@ -308,7 +303,7 @@ That’s when Maheedhar explained:
 
 ---
 
-##  Concept Introduction
+##  What’s Really Happening
 
 A **variable** is like a named container. Instead of typing values repeatedly, you assign them once and reuse them. This makes scripts:
 
@@ -318,7 +313,7 @@ A **variable** is like a named container. Instead of typing values repeatedly, y
 
 ---
 
-##  Technical Deep Dive
+##  How It Works
 
 ### Understanding Variables in Scripts
 
@@ -490,7 +485,7 @@ Maheedhar explained:
 
 ---
 
-##  Concept Introduction
+##  What’s Really Happening
 
 The **`read` command** allows a script to capture input from the user.
 
@@ -502,7 +497,7 @@ This makes scripts customizable and interactive.
 
 ---
 
-## Technical Deep Dive
+## How It Works
 
 ### Basic `read` Command
 
@@ -655,7 +650,7 @@ Maheedhar smiled:
 
 ---
 
-## Concept Introduction
+## What’s Really Happening
 
 Control flow in shell scripting is about:
 
@@ -666,7 +661,7 @@ Together, they give scripts **logic and intelligence**.
 
 ---
 
-##  Technical Deep Dive
+##  How It Works
 
 ###  Conditional Statements
 
@@ -823,7 +818,7 @@ Maheedhar replied:
 
 ---
 
-## Concept Introduction
+## What’s Really Happening
 
 Functions in shell scripting are **blocks of reusable code**. They:
 
@@ -835,7 +830,7 @@ Think of them as **mini-scripts inside your script**.
 
 ---
 
-## Technical Deep Dive
+## How It Works
 
 ### 🔹 Function Definition
 
@@ -987,7 +982,7 @@ That secret number is called the **exit status**.
 
 ---
 
-## Concept Introduction
+## What’s Really Happening
 
 * Every command in Linux ends with an **exit code**.
 * **0** means **success**.
@@ -996,7 +991,7 @@ That secret number is called the **exit status**.
 
 ---
 
-## Technical Deep Dive
+## How It Works
 
 ### Exit Status Variable
 
@@ -1180,4 +1175,3 @@ check_disk_space
 echo "Backup process finished at $(date)"
 exit 0
 ```
-
