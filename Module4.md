@@ -486,5 +486,4 @@ His scripts were no longer simple, one-off commands. They became resilient, auto
 
 Bhanu now understood that automation wasn’t just about saving time — it was about creating **efficient, reliable, and scalable systems**. Like a championship coach, he could now plan, execute, and optimize not just individual plays, but the whole season.
 
-
-```
+---
