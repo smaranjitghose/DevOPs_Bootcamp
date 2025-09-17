@@ -2,7 +2,7 @@
 
 ## Bhanu's Journey: From Scripting Apprentice to Process Master
 
-<img src="./image/Module4/Process Management & Automation.png"alt=""/>
+<img src="./image/Module4/Process Management & Automation.png" alt="Process Management & Automation" style="background:black"/>
 
 After mastering shell scripting fundamentals in Module 3, Bhanu felt empowered. His automated backup scripts were running flawlessly, saving hours each week. But as he took on more complex projects at the university IT department, he noticed something - his scripts were good, but they weren't great. They ran sequentially, couldn't handle multiple tasks simultaneously, and lacked sophisticated scheduling.
 
@@ -12,31 +12,103 @@ Bhanu realized he was like the inter-college player who joined the university te
 
 That night, as he sat courtside watching the players, he overheard the coach talking to a struggling player: *"Stopping at a difficult situation isn't ultimate growth. What happens if you fail? Anyone will laugh? If you have no fear to play the game, then why fear failure? You have to cross failure to get the edge called Success."*
 
-<img src="./image/Module4"alt=""/>
-
 Bhanu smiled. He had faced similar fears when learning to script in Module 3. Now he had a new challenge: mastering process management and automation to take his skills to the next level.
 
 ---
 
-## 4.1 Input and Output Redirection
 
-### Channeling Your Efforts Like a Pro
 
-| Concept            | Description                               | Basketball Analogy & Connection to Module 3                                                                                                                                                                     |
-| ------------------ | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `> redirection`  | Overwrite output to a file                | **Like recording new game strategies** `<br>`In Module 3, Bhanu created simple backup logs. Now he's overwriting old strategy files with new ones:`<br>echo "New defensive formation" > playbook.txt` |
-| `>> redirection` | Append output to a file                   | **Like adding new plays to existing playbook** `<br>`Building on Module 3's logging, now he's accumulating performance data:`<br>echo "3-point shooting: 65%" >> performance_stats.txt`               |
-| `< redirection`  | Use file content as input                 | **Like running drills from a pre-designed playbook** `<br>`Evolved from Module 3's basic scripts, now using data files as input:`<br>sort < player_rankings.txt`                                      |
-| `2> redirection` | Redirect error messages to a file         | **Like tracking missed shots for analysis** `<br>`In Module 3, Bhanu logged basic errors. Now he's systematically capturing failures:`<br>./training_script 2> error_analysis.txt`                    |
-| `&> redirection` | Redirect both output and errors to a file | **Like recording complete game footage** `<br>`Enhancing Module 3's logging, now capturing comprehensive session data:`<br>./full_practice.sh &> complete_session.log`                                |
+# **4.1 Input and Output Redirection**
+
+*Channeling Your Efforts Like a Pro*
+
+When Bhanu first wrote scripts in Module 3, his programs simply printed outputs on the terminal. It worked fine for small tasks, but soon he realized that professional system administrators rarely stare at screens waiting for output. Instead, they redirect outputs, store logs, reuse inputs, and track errors. Just like a basketball coach channels player energy into focused drills, Bhanu needed to channel his script’s input and output into the right places.
+
+This is where **redirection** comes into play. By controlling where data goes — to files, from files, or into error logs — Bhanu could make his scripts smarter, more reliable, and easier to manage.
+
+---
+
+### **Overwriting Output with `>`**
+
+Using `>` sends command output to a file, replacing any previous content.
+It’s like a coach erasing the old whiteboard and writing a fresh strategy.
+
+```bash
+echo "New defensive formation" > playbook.txt
+```
+
+* If `playbook.txt` already had plays, they are replaced with the new one.
+* Useful for maintaining updated reports or logs.
+
+---
+
+### **Appending Output with `>>`**
+
+The `>>` operator adds new output to the end of a file without erasing old data.
+Think of it like a player adding new moves to an existing playbook.
+
+```bash
+echo "3-point shooting: 65%" >> performance_stats.txt
+```
+
+* Keeps previous performance data intact.
+* Useful for long-term tracking (like log files).
+
+---
+
+### **Using Input with `<`**
+
+The `<` operator takes input for a command from a file instead of typing it manually.
+It’s like a coach running drills directly from a printed training schedule.
+
+```bash
+sort < player_rankings.txt
+```
+
+* Here, the file `player_rankings.txt` is fed as input to the `sort` command.
+* Perfect when working with predefined data sets.
+
+---
+
+### **Redirecting Errors with `2>`**
+
+By default, errors appear on the screen. With `2>`, Bhanu could capture errors separately.
+This is like tracking missed shots during practice for post-game analysis.
+
+```bash
+./training_script 2> error_analysis.txt
+```
+
+* Regular output goes to the terminal.
+* Errors are stored in `error_analysis.txt` for review.
+
+---
+
+### **Redirecting Both Output and Errors with `&>`**
+
+Sometimes Bhanu needed *everything* recorded — success and mistakes alike.
+The `&>` operator captures both standard output and errors in one place.
+This is like recording an entire game to review every play later.
+
+```bash
+./full_practice.sh &> complete_session.log
+```
+
+* Nothing is lost — both results and failures are in one log file.
+* Extremely useful for debugging automation scripts.
+
+---
+
+ With these redirection techniques, Bhanu no longer lost valuable data. Just like a basketball coach carefully manages drills, performances, and mistakes, Bhanu learned to manage his script’s input and output streams.
+
+---
+
 
 ![Process Management & Automation - Input and Output Redirection](./image/Module4/Input%20and%20Output%20Redirection.png)
 
 Perfect! I've created a comprehensive visual guide that explains **Process Management & Automation** with a focus on **Input and Output Redirection** using your basketball coaching examples.
 
 ## Key Concepts Illustrated:
-
-
 
 **🏀 1. Output Redirection (>)** - Overwriting files
 
@@ -65,113 +137,291 @@ Perfect! I've created a comprehensive visual guide that explains **Process Manag
 
 This visual representation makes the abstract concept of process management tangible through the familiar context of basketball coaching, showing how data flows through different channels just like information flows through different aspects of team management!
 
-## 4.2 Process Management
+---
 
-### Orchestrating Multiple Tasks Like a Championship Team
+# **4.2 Process Management**
 
-| Command             | Description                           | Basketball Analogy & Connection to Module 3                                                                                                                                                    |
-| ------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ps`              | List current processes                | **Like checking which drills are active** `<br>`In Module 3, Bhanu ran single scripts. Now he's managing multiple processes:``<br>```ps aux                                          |
-| `top`             | Monitor system processes in real-time | **Like watching real-time game statistics** `<br>`Building on Module 3's basic scripts, now monitoring resource usage:`<br>top` → Real-time process monitoring                      |
-| `kill PID`        | Terminate a specific process          | **Like stopping a drill that's not working** `<br>`In Module 3, scripts ran to completion. Now he's controlling execution:`<br>kill 1234` → Stops unproductive process              |
-| `nohup command &` | Run process immune to hangups         | **Like drills that continue even after you leave** `<br>`Evolved from Module 3's scripts, now creating persistent processes:`<br>nohup ./endurance_drill.sh &` → Runs in background |
-| `jobs`            | List background jobs                  | **Like checking all active training stations** `<br>`In Module 3, tasks were sequential. Now managing concurrent jobs:`<br>jobs` → Shows background processes                       |
-| `fg %n`           | Bring background job to foreground    | **Like focusing attention on a specific drill** `<br>`Building on Module 3's linear execution, now controlling focus:`<br>fg %1` → Brings job to foreground                         |
-| `bg %n`           | Send job to background                | **Like letting a drill run while focusing elsewhere** `<br>`Enhanced from Module 3's simple scripts, now multitasking:`<br>bg %1` → Sends job to background                         |
+*Orchestrating Multiple Tasks Like a Championship Team*
 
-### Practical Examples
+Back in Module 3, Bhanu’s scripts were like solo drills — one at a time, start to finish. They worked, but just as no basketball team can rely on one player dribbling alone, no modern system runs on a single process. Real servers run dozens, sometimes hundreds, of processes at once.
 
-```bash
-# Monitor all training processes (Module 3: single script execution)
-ps aux | grep Bhanu_training
-
-# Start multiple concurrent drills (Module 3: sequential execution)
-./shooting_practice.sh &
-./dribbling_drills.sh &
-./conditioning exercises.sh &
-
-# Check background jobs (Module 3: no job management)
-jobs
-
-# Focus on shooting while others run in background (Module 3: linear focus)
-fg %1  # Bring shooting to foreground
-bg %2  # Send dribbling to background
-bg %3  # Send conditioning to background
-
-# Stop unproductive drill (Module 3: no process control)
-kill %2  # Stop dribbling drill if not effective
-
-# Start persistent training analysis (Module 3: session-bound scripts)
-nohup ./performance_analysis.sh > analysis.log &
-```
+Bhanu needed to step up: instead of just *writing scripts*, he now had to *manage processes*. He realized that process management is like coaching — keeping track of active drills, stopping the ones that don’t work, and ensuring that everything continues running smoothly even if he leaves the court.
 
 ---
 
-## 4.3 Cron Jobs and Task Automation
+### **Checking Current Processes with `ps`**
+
+The `ps` command shows currently running processes.
+It’s like checking which drills are happening on different courts.
+
+```bash
+ps aux
+```
+
+* Displays user, process ID (PID), CPU/memory usage, and more.
+* Bhanu could now identify which scripts were active in the system.
+
+---
+
+### **Real-Time Monitoring with `top`**
+
+The `top` command updates process information continuously.
+Think of it as the scoreboard showing live stats during a game.
+
+```bash
+top
+```
+
+* Shows which processes consume the most CPU/memory.
+* Helps Bhanu track performance bottlenecks in real-time.
+
+---
+
+### **Stopping Processes with `kill`**
+
+Sometimes drills (or processes) don’t go as planned. With `kill`, Bhanu could stop them.
+It’s like a coach blowing the whistle to halt an unproductive practice.
+
+```bash
+kill 1234
+```
+
+* Terminates the process with PID `1234`.
+* Ensures misbehaving tasks don’t slow the system.
+
+---
+
+### **Running Independent Jobs with `nohup`**
+
+Normally, if Bhanu logged out, his running scripts would stop. With `nohup`, processes kept going.
+It’s like setting a drill that keeps running even after the coach leaves.
+
+```bash
+nohup ./backup.sh &
+```
+
+* `nohup` makes the process immune to hangups.
+* `&` runs it in the background.
+* Bhanu could log out and still trust his backups to finish.
+
+---
+
+### **Tracking Background Jobs with `jobs`**
+
+When Bhanu had multiple drills running in the background, he used `jobs` to list them.
+It’s like checking all active training stations during practice.
+
+```bash
+jobs
+```
+
+* Shows background processes with job numbers.
+* Helps Bhanu keep track of multitasking scripts.
+
+---
+
+### **Bringing Jobs to Foreground with `fg`**
+
+Sometimes Bhanu needed to focus on one drill again. The `fg` command brought a background process back.
+It’s like telling the team, “Stop everything else, let’s focus on free throws now.”
+
+```bash
+fg %1
+```
+
+* Brings job number 1 to the foreground.
+* Useful for directly interacting with a paused or backgrounded task.
+
+---
+
+### **Sending Jobs to Background with `bg`**
+
+On the flip side, if Bhanu wanted to let a process run quietly, he sent it to the background.
+It’s like letting one drill continue while he focused on another.
+
+```bash
+bg %2
+```
+
+* Resumes job number 2 in the background.
+* Bhanu could multitask efficiently — something he never managed in Module 3.
+
+---
+
+With these process management tools, Bhanu was no longer just running scripts; he was orchestrating them. Just as a coach ensures drills, plays, and strategies all run smoothly together, Bhanu could now monitor, stop, and schedule processes like a pro.
+
+---
+
+
+
+# **4.3 Cron Jobs and Task Automation**
 
 <img src="image/Module4/Cron Jobs and Task Automation.png">
 
-### Creating Your Championship Training Schedule
-
-| Command        | Description              | Basketball Analogy & Connection to Module 3                                                                                                                                   |
-| -------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `crontab -e` | Edit cron jobs           | **Like designing your weekly training schedule** `<br>`In Module 3, Bhanu ran scripts manually. Now scheduling automation:`<br>crontab -e` → Opens schedule editor |
-| `crontab -l` | List scheduled cron jobs | **Like reviewing your training calendar** `<br>`Building on Module 3's manual execution, now managing schedules:`<br>crontab -l` → Shows scheduled tasks           |
-| `at time`    | Schedule one-time task   | **Like planning a special one-time practice session** `<br>`Evolved from Module 3's immediate execution, now scheduling:``<br>```echo "./special_drill.sh"          |
-| `systemctl`  | Control systemd services | **Like managing different training facilities** `<br>`Enhanced from Module 3's simple scripts, now creating services:`<br>systemctl start training.service`         |
-
-### Practical Examples
-
-```bash
-# Schedule daily shooting practice (Module 3: manual execution)
-0 6 * * * /home/Bhanu/training/shooting_drill.sh
-
-# Schedule weekly performance review (Module 3: manual analysis)
-0 20 * * 0 /home/Bhanu/analysis/weekly_report.sh
-
-# Schedule video analysis after games (Module 3: immediate processing)
-echo "/home/Bhanu/analysis/post_game.sh" | at 22:00
-
-# Create persistent training service (Module 3: session-bound scripts)
-sudo systemctl enable Bhanu-training.service
-sudo systemctl start Bhanu-training.service
-
-# Monthly skills assessment (Module 3: ad-hoc evaluation)
-0 9 1 * * /home/Bhanu/assessment/monthly_skills.sh
-```
-
-### Sample Crontab for Comprehensive Training
-
-```bash
-# Daily training schedule (Module 3: manual daily tasks)
-0 6 * * * /home/Bhanu/training/morning_cardio.sh
-15 7 * * * /home/Bhanu/training/shooting_practice.sh
-0 18 * * * /home/Bhanu/training/evening_strength.sh
-
-# Weekly analysis (Module 3: manual weekly analysis)
-0 20 * * 0 /home/Bhanu/analysis/weekly_performance_report.sh
-
-# Monthly progress review (Module 3: manual monthly review)
-0 9 1 * * /home/Bhanu/analysis/monthly_progress.sh
-
-# Bi-weekly strategy update (Module 3: manual updates)
-0 16 1,15 * * /home/Bhanu/strategy/update_playbook.sh
-```
 
 ---
 
-## 4.4 Working with Logs
+
+*Creating Your Championship Training Schedule*
+
+In Module 3, Bhanu was like a player who showed up at the court every time he wanted to practice. He had to *start each drill manually*. It worked, but it wasn’t efficient.
+
+As he watched the university basketball coach plan the team’s weekly training schedule — assigning practice times, recovery days, and special drills — Bhanu realized he needed something similar for his scripts. Instead of babysitting them, he could *schedule* them.
+
+That’s where **cron jobs, `at` commands, and systemd timers** came in. They transformed his scripts from “run when I remember” to “run automatically like clockwork.”
+
+---
+
+### **Scheduling Recurring Tasks with `crontab -e`**
+
+The `crontab -e` command opens the cron table editor, where Bhanu could schedule scripts at fixed times.
+
+It’s like the coach designing a weekly training plan that repeats consistently.
+
+```bash
+crontab -e
+```
+
+Inside, he could add entries like:
+
+```bash
+0 2 * * * /home/bhanu/daily_backup.sh
+```
+
+* Runs `daily_backup.sh` every day at **2 AM**.
+* No more late-night manual runs — Bhanu could finally sleep!
+
+---
+
+### **Reviewing Scheduled Jobs with `crontab -l`**
+
+The `crontab -l` command lists all active cron jobs.
+It’s like the coach reviewing the team’s weekly training calendar.
+
+```bash
+crontab -l
+```
+
+* Displays Bhanu’s scheduled tasks.
+* Helps him confirm that his backup, cleanup, and reporting scripts are all on track.
+
+---
+
+### **One-Time Scheduling with `at`**
+
+Sometimes Bhanu needed a script to run only once — maybe for a special system update. That’s where `at` came in.
+
+It’s like scheduling a one-time practice session before a championship game.
+
+```bash
+at 11pm
+at> /home/bhanu/special_cleanup.sh
+at> <Ctrl+D>
+```
+
+* Runs `special_cleanup.sh` once at **11 PM**.
+* Perfect for urgent but non-repeating tasks.
+
+---
+
+### **Service and Timer Management with `systemctl`**
+
+For advanced automation, Bhanu learned to use **systemd timers**. Unlike cron, they integrated deeply with the system and provided better logging and reliability.
+
+It’s like the coach managing not just the players, but the *entire training facility* — lights, timers, and even recovery sessions.
+
+```bash
+systemctl start myservice
+systemctl enable myservice.timer
+```
+
+* Creates recurring or event-driven automation.
+* Ensures critical tasks like log rotation or monitoring scripts always run.
+
+---
+
+With cron jobs, `at`, and systemd timers, Bhanu finally became the coach of his own system. Just as a championship team doesn’t rely on ad-hoc practice, his scripts now ran on **structured schedules**, giving him time to focus on strategy instead of routine.
+
+---
+
+
+
+# **4.4 Working with Logs**
 
 <img src="image/Module4/Working with Logs.png">
 
-### Analyzing Performance Like a Championship Coach
 
-| Command                                                                                                                                                                                                                                           | Description                   | Basketball Analogy & Connection to Module 3                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `tail -f file`                                                                                                                                                                                                                                  | Monitor log file in real-time | **Like watching game stats live** `<br>`In Module 3, Bhanu created basic logs. Now monitoring in real-time:`<br>tail -f game_log.txt` → Live updates              |
-| `grep pattern file`                                                                                                                                                                                                                             | Search for specific patterns  | **Like finding all instances of a particular play** `<br>`Building on Module 3's simple logging, now extracting patterns:`<br>grep "3-point shot" game_log.txt`    |
-| `awk '{print $N}' file` | Extract specific columns           | **Like isolating shooting percentage from stats** `<br>`Evolved from Module 3's basic output, now processing data:`<br>awk '{print $4}' stats.txt` → Shows shooting % |                               |                                                                                                                                                                              |
-| `sed 's/old/new/g' file`                                                                                                                                                                                                                        | Replace text in file          | **Like correcting errors in play-by-play** `<br>`Enhanced from Module 3's simple text manipulation, now transforming data:`<br>sed 's/missed/made/g' shot_log.txt` |
+
+*Analyzing Performance Like a Championship Coach*
+
+In Module 3, Bhanu had started with basic logging — simple text files that recorded what his scripts were doing. But just like raw basketball game footage, logs alone weren’t enough. To improve performance, you don’t just watch the game — you analyze it.
+
+When Bhanu watched his coach reviewing match logs, he saw a method: monitor plays live, spot key patterns, isolate critical data, and correct errors. That’s exactly how he began to handle his script logs — transforming them into powerful insights.
+
+---
+
+### **Monitoring Logs in Real-Time with `tail -f`**
+
+The `tail -f` command lets Bhanu watch new log entries as they happen.
+
+It’s like standing courtside and watching the scoreboard update live during the game.
+
+```bash
+tail -f game_log.txt
+```
+
+* Shows updates as they’re written.
+* Perfect for tracking script execution or troubleshooting errors on the fly.
+
+---
+
+### **Filtering Key Events with `grep`**
+
+With logs growing huge, Bhanu didn’t want *all* the details — just the critical plays. `grep` let him search for patterns inside logs.
+
+It’s like scanning the game log for every instance of a “3-point shot.”
+
+```bash
+grep "3-point shot" game_log.txt
+```
+
+* Extracts specific keywords.
+* Helps Bhanu isolate important events like errors, warnings, or successes.
+
+---
+
+### **Extracting Data with `awk`**
+
+Sometimes Bhanu needed not just words, but numbers — CPU usage, percentages, or error counts. That’s where `awk` came in, letting him pick out exact columns.
+
+It’s like isolating *just the shooting percentage* from a player’s stat sheet.
+
+```bash
+awk '{print $4}' stats.txt
+```
+
+* Prints the 4th column from each line.
+* Great for pulling metrics from structured logs.
+
+---
+
+### **Transforming Logs with `sed`**
+
+Finally, Bhanu learned `sed` — a tool to modify logs directly.
+
+It’s like correcting the play-by-play record after spotting a mistake (changing “missed” to “made”).
+
+```bash
+sed 's/missed/made/g' shot_log.txt
+```
+
+* Replaces all instances of text.
+* Useful for cleaning or reformatting data for further analysis.
+
+---
+
+By mastering `tail -f`, `grep`, `awk`, and `sed`, Bhanu went from *creating logs* to *coaching with logs*. Just like a championship coach uses stats to refine strategies, Bhanu now used logs to debug, optimize, and automate his scripts at a professional level.
+
 
 ### Practical Examples
 
@@ -222,25 +472,19 @@ fi
 
 ---
 
-## Bhanu's Transformation: From Scripting Apprentice to Process Master
 
-Bhanu applied these advanced techniques to his IT work at the university, just as he applied them to his basketball training:
+*From Solo Drills to Championship Orchestration*
 
-1. **Input/Output Redirection**: He created sophisticated logging systems for his scripts, capturing both standard output and errors separately for better debugging and analysis.
-2. **Process Management**: He learned to run multiple scripts concurrently, monitoring their performance and stopping unproductive processes immediately. This was like managing multiple training drills simultaneously.
-3. **Cron Jobs and Task Automation**: He scheduled his scripts to run at optimal times, creating a seamless automation system that worked 24/7. This was like having a perfect training schedule that ran itself.
-4. **Log Analysis**: He developed advanced scripts to analyze system logs, identify patterns, and generate actionable insights. This was like a coach analyzing game footage to improve team performance.
+By the end of this module, Bhanu had transformed from a script practitioner into a process orchestrator. Just like a basketball team moves beyond individual drills to coordinated plays, he learned to manage processes, redirect input/output, schedule automation, and analyze logs like a professional.
 
-The results were remarkable. System uptime improved by 40%, response time decreased by 35%, and Bhanu was promoted to lead the university's automation team. His basketball game also improved dramatically - he made the starting lineup and helped lead the team to the championship.
+His scripts were no longer simple, one-off commands. They became resilient, automated, and optimized systems.
 
-At the end-of-season banquet, Bhanu was asked about his secret to success in both IT and basketball. He smiled and said:
+## **Bhanu’s Growth**
 
-*"In Module 3, I learned to write scripts - that was like learning the basic skills of basketball. But in Module 4, I learned to manage processes and automate tasks - that was like learning to orchestrate an entire team. The real magic happens when you stop thinking about individual commands and start thinking about systems. Whether it's code or basketball, success comes from managing processes effectively, automating intelligently, and learning from every outcome."*
+* **Module 3**: Learned the fundamentals — writing scripts, using variables, handling control flow, and building reusable functions.
+* **Module 4**: Elevated his game — mastering processes, automation, and log analysis to operate at a higher level.
 
-*"Remember: The court doesn't reward those who fear failure. It rewards those who manage their processes effectively, automate their improvements, and learn from every outcome. Now go upgrade your game!"*
+Bhanu now understood that automation wasn’t just about saving time — it was about creating **efficient, reliable, and scalable systems**. Like a championship coach, he could now plan, execute, and optimize not just individual plays, but the whole season.
 
-Bhanu had completed his transformation from a scripting apprentice to a process master, proving that with the right systems in place, there's no limit to what you can achieve.
-
-```
 
 ```
