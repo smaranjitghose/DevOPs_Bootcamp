@@ -33,7 +33,7 @@ The shell operates as an essential intermediary layer in the computing architect
 
 To better understand the shell's place in the computing ecosystem, consider Linux as a tall building with distinct layers:
 
-<img src="./image/Module1/SystemArchitecture(1).png">
+<img  src="./image/Module1/Linux System Architecture.png">
 
 **Foundation Layer - Hardware**  
 At the bottom lies the hardware foundation—the CPU, RAM, hard disk, and network cards. These components are powerful but lack the ability to understand human language or execute high-level instructions directly.
@@ -262,4 +262,5 @@ Understanding these differences is crucial for effective command-line usage. For
 
 
 By mastering these components and their relationships, you unlock the full potential of command-line computing, enabling efficient system interaction, powerful automation, and precise control over your computing environment.
+
 
