@@ -686,8 +686,6 @@ Managing processes in Linux is like managing players during a basketball game. E
 
 <img src="./image/Module2/Cron Jobs and Task Automation_light.png" alt="Understanding the Shell" style="display: block; margin: auto; width: 450px; height: auto;" />
 
-Perfect 👍 Here’s **Cron Jobs and Task Automation** rewritten in the same **book-style format** we’ve been using for the modules:
-
 ---
 
 # Cron Jobs and Task Automation
@@ -1159,4 +1157,5 @@ Module 3 is where the shell truly awakens: loops and conditions that breathe log
 So take a breath, close the chapter on Module 2, and get ready—because the shell is about to evolve from a trusted companion into a **silent partner in creation**.
 
 ---
+
 
