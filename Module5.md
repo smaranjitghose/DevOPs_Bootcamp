@@ -337,15 +337,12 @@ The director nodded. "You've not just mastered scripting - you've mastered resil
 
 Bhanu had completed his journey from a novice script writer to a true scripting virtuoso, capable of building automation systems that could withstand any challenge. His systems were no longer just functional - they were bulletproof.
 
-## Key Takeaways
+### primary outcomes
 
 1. **Robust Error Handling** (`set -e`, `trap`) → Build scripts that survive failures
 2. **Effective Debugging** (`bash -x`, `set -x`) → Find and fix issues efficiently
 3. **Advanced Pattern Matching** (`grep -E`, `sed -r`) → Process complex text patterns
 4. **Parallel Processing** (`xargs -P`, background jobs) → Maximize performance
 
-Remember: Great scripts don't just work - they survive. Build resilience into everything you automate.
 
-```
 
-```
