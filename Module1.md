@@ -14,9 +14,10 @@
 
 **Bhanu:** "I'm all ears."
 
-<img src="./image/Module1/Shell.jpg">
+
 
 **Sathya:** "Imagine you're in a foreign country where you don't speak the language. You'd need an interpreter to communicate with locals, right? That's exactly what a shell is—it's the interpreter between you and your computer's operating system."
+<img src="./image/Module1/Shell.jpg">
 
 **Bhanu:** "So it's like having a direct conversation with my computer?"
 
@@ -261,3 +262,4 @@ Understanding these differences is crucial for effective command-line usage. For
 
 
 By mastering these components and their relationships, you unlock the full potential of command-line computing, enabling efficient system interaction, powerful automation, and precise control over your computing environment.
+
