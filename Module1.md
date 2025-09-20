@@ -14,7 +14,7 @@
 
 **Bhanu:** "I'm all ears."
 
-<img src="./image/Module1/Understanding the Shell.png">
+<img src="./image/Module1/Shell.jpg">
 
 **Sathya:** "Imagine you're in a foreign country where you don't speak the language. You'd need an interpreter to communicate with locals, right? That's exactly what a shell is—it's the interpreter between you and your computer's operating system."
 
@@ -258,5 +258,6 @@ Bash is your preferred shell when:
 The terminal, shell, and Bash represent distinct yet interconnected components of the command-line computing experience. The terminal serves as the user interface (the dashboard), the shell acts as the command interpreter (the engine), and Bash provides a specific implementation of that engine with enhanced features.
 
 Understanding these differences is crucial for effective command-line usage. For most users, Bash provides an excellent balance of power, compatibility, and usability. However, the choice of shell should be guided by specific needs and preferences, while the terminal selection can be based on personal workflow requirements.
+
 
 By mastering these components and their relationships, you unlock the full potential of command-line computing, enabling efficient system interaction, powerful automation, and precise control over your computing environment.
