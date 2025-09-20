@@ -73,7 +73,7 @@ cat hello.txt
 
 ## 1. Working with Files and Directories
 
-<img style="background: black" src="./image/Module2/Working with Files and Directories.png" alt="Working with Files and Directories"/>
+<img style="background-color: black" src="./image/Module2/Working with Files and Directories.png" alt="Working with Files and Directories"/>
 
 # File System Navigation
 
@@ -1159,3 +1159,4 @@ Module 3 is where the shell truly awakens: loops and conditions that breathe log
 So take a breath, close the chapter on Module 2, and get ready—because the shell is about to evolve from a trusted companion into a **silent partner in creation**.
 
 ---
+
