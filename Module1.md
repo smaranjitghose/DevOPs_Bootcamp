@@ -19,7 +19,7 @@
 **Sathya:** "Imagine you're in a foreign country where you don't speak the language. You'd need an interpreter to communicate with locals, right? That's exactly what a shell is—it's the interpreter between you and your computer's operating system."
 <img src="./image/Module1/Shell.jpg">
 
-**Bhanu:** "So it's like having a direct conversation with my computer?"
+**Bhanu:** "So it's like having a direct conversation with my operating system?"
 
 **Sathya:** "Exactly! And once you learn this language, you can do things much faster and more efficiently than through point-and-click interfaces."
 
@@ -27,7 +27,7 @@
 
 A shell serves as the fundamental interface between users and the operating system, functioning as a command interpreter that translates human-readable instructions into machine-executable operations. At its core, the shell provides a programming environment that enables users to interact with system services, execute commands, and automate tasks through scripting.
 
-The shell operates as an essential intermediary layer in the computing architecture. When users input commands, the shell parses these instructions, communicates with the operating system kernel, and returns the results in a comprehensible format. This translation process is crucial because the kernel—the core component managing hardware resources—operates at a low level that is not directly accessible to most users.
+The shell operates as an essential intermediary layer in the Operating system architecture. When users input commands, the shell parses these instructions, communicates with the operating system kernel, and returns the results in a comprehensible format. This translation process is crucial because the kernel - the core component managing hardware resources - operates at a low level that is not directly accessible to most users.
 
 ### Linux Architecture: 
 
@@ -38,7 +38,7 @@ To better understand the shell's place in the computing ecosystem, consider Linu
 **Foundation Layer - Hardware**  
 At the bottom lies the hardware foundation—the CPU, RAM, hard disk, and network cards. These components are powerful but lack the ability to understand human language or execute high-level instructions directly.
 
-**Control Room Layer - Kernel**  
+**The Kernel**  
 Just above the hardware sits the kernel, functioning as the building's central control room. The kernel manages critical system operations:
 - Process scheduling (like a traffic officer managing busy intersections)
 - Memory management (allocating and reclaiming resources)
@@ -262,5 +262,6 @@ Understanding these differences is crucial for effective command-line usage. For
 
 
 By mastering these components and their relationships, you unlock the full potential of command-line computing, enabling efficient system interaction, powerful automation, and precise control over your computing environment.
+
 
 
